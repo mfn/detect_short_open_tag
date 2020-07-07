@@ -1,5 +1,23 @@
 #!/usr/bin/env bash
 
-curdir=$(dirname "${BASH_SOURCE[0]}")
+# From CakePHP(tm) v 1.2.0.5012 bin/cake
+#
+# Canonicalize by following every symlink of the given name recursively
+canonicalize() {
+    NAME="$1"
+    if [ -f "$NAME" ]
+    then
+        DIR=$(dirname -- "$NAME")
+        NAME=$(cd -P "$DIR" > /dev/null && pwd -P)/$(basename -- "$NAME")
+    fi
+    while [ -h "$NAME" ]; do
+        DIR=$(dirname -- "$NAME")
+        SYM=$(readlink "$NAME")
+        NAME=$(cd "$DIR" > /dev/null && cd $(dirname -- "$SYM") > /dev/null && pwd)/$(basename -- "$SYM")
+    done
+    echo "$NAME"
+}
 
-php $curdir/detect_short_open_tag.php "$@"
+DIR=$(dirname -- "$(canonicalize "$0")")
+
+exec php $DIR/detect_short_open_tag.php "$@"
