@@ -6,6 +6,8 @@ CHANGELOG
 
 2020-07-07, 1.1
 ---------------
+
+### Fixed
 - Add `bin` entry in `composer.json` so the script is available in `vendor/bin/`
 
 2020-07-07, 1.0
