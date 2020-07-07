@@ -1,6 +1,10 @@
 # Detect the use of short_open_tag in your PHP source code
 
-Usage:
+## Installation
+
+`composer require --dev mfn/detect_short_open_tag`
+
+## Usage
 ```
 bin/detect_short_open_tag [-e|--extension php] <dir1>... <dirn>
 Scans the given paths for PHP files containing the use of short open tags and reports them.
