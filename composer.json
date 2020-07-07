@@ -18,6 +18,9 @@
   "require": {
     "php": ">=7.1"
   },
+  "bin": [
+    "bin/detect_short_open_tag"
+  ],
   "scripts": {
     "tests": [
       "bin/detect_short_open_tag -e php -e foo tests/ > tests/output.actual ; diff -u tests/output.actual tests/output.expected"
