@@ -38,6 +38,10 @@ foreach ($files as $file) {
     }
 }
 
+if (!$found) {
+    echo "No errors detected\n";
+}
+
 exit($found ? 1 : 0);
 
 function usage_and_exit($self)
