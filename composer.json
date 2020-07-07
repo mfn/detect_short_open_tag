@@ -1,0 +1,26 @@
+{
+  "name": "mfn/detect_short_open_tag",
+  "description": "Scans the given directories / files and reports uses of short open tags",
+  "keywords": [
+    "analyze",
+    "detect",
+    "php",
+    "short_open_tag"
+  ],
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Marks Podar",
+      "email": "markus@fischer.name"
+    }
+  ],
+  "require": {
+    "php": ">=7.1"
+  },
+  "scripts": {
+    "tests": [
+      "bin/detect_short_open_tag -e php -e foo tests/ > tests/output.actual ; diff -u tests/output.actual tests/output.expected"
+    ]
+  }
+}

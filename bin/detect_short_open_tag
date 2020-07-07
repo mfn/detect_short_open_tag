@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+curdir=$(dirname "${BASH_SOURCE[0]}")
+
+php $curdir/detect_short_open_tag.php "$@"

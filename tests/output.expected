@@ -1,0 +1,4 @@
+::error file=tests/mixed_open_tags.php,line=2::short open tag not allowed
+::error file=tests/mixed_open_tags.php,line=4::short open tag not allowed
+::error file=tests/only_short_open_tag.php,line=1::short open tag not allowed
+::error file=tests/short_open_tag_other_file_extension.foo,line=1::short open tag not allowed
